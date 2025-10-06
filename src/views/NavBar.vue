@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BaseButton from '../components/BaseButton.vue'
+</script>
 
 <template>
   <section>
@@ -8,9 +10,8 @@
         <div>
           <nav class="md:mt-10 mt-5">
             <ul class="space-y-3">
-              <li
-                class="flex items-center px-3 py-2 text-sm text-black hover:bg-gray-100 rounded-lg"
-              >
+              <BaseButton variant="primary">Button </BaseButton>
+              <li>
                 <svg
                   class="mr-3"
                   width="24"
