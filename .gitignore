@@ -8,14 +8,30 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-.DS_Store
-dist
-dist-ssr
-coverage
-*.local
 
-/cypress/videos/
-/cypress/screenshots/
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/coverage/
+frontend/*.local
+
+# Backend
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/env/
+backend/venv/
+backend/.venv/
+backend/.env
+backend/*.db
+backend/*.sqlite
+
+# General
+.DS_Store
+*.local
 
 # Editor directories and files
 .vscode/*
