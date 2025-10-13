@@ -32,6 +32,7 @@ backend/*.sqlite
 # General
 .DS_Store
 *.local
+.env
 
 # Editor directories and files
 .vscode/*
