@@ -1,7 +1,7 @@
 # backend/app/mock_data.py
 
 from datetime import datetime
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 # Mock Sports
 MOCK_SPORTS = [
@@ -211,25 +211,25 @@ MOCK_PLAYER_GAME_STATS = [
 def get_all_teams() -> List[Dict[str, Any]]:
     return MOCK_TEAMS
 
-def get_team_by_id(team_id: int) -> Dict[str, Any] | None:
+def get_team_by_id(team_id: int) -> Optional[Dict[str, Any]]:
     return next((team for team in MOCK_TEAMS if team["id"] == team_id), None)
 
 def get_players_by_team(team_id: int) -> List[Dict[str, Any]]:
     return [player for player in MOCK_PLAYERS if player["team_id"] == team_id]
 
-def get_player_by_id(player_id: int) -> Dict[str, Any] | None:
+def get_player_by_id(player_id: int) -> Optional[Dict[str, Any]]:
     return next((player for player in MOCK_PLAYERS if player["id"] == player_id), None)
 
 def get_all_games() -> List[Dict[str, Any]]:
     return MOCK_GAMES
 
-def get_game_by_id(game_id: int) -> Dict[str, Any] | None:
+def get_game_by_id(game_id: int) -> Optional[Dict[str, Any]]:
     return next((game for game in MOCK_GAMES if game["id"] == game_id), None)
 
 def get_game_stats(game_id: int) -> List[Dict[str, Any]]:
     return [stat for stat in MOCK_PLAYER_GAME_STATS if stat["game_id"] == game_id]
 
-def get_player_stats_for_game(game_id: int, player_id: int) -> Dict[str, Any] | None:
+def get_player_stats_for_game(game_id: int, player_id: int) -> Optional[Dict[str, Any]]:
     return next(
         (stat for stat in MOCK_PLAYER_GAME_STATS 
          if stat["game_id"] == game_id and stat["player_id"] == player_id),
