@@ -17,9 +17,8 @@ frontend/coverage/
 frontend/*.local
 
 # Backend
-backend/app/__pycache__/
-backend/app/api/__pycache__/
-backend/*.pyc
+__pycache__/
+*.pyc
 backend/*.pyo
 backend/*.pyd
 backend/.Python
