@@ -35,6 +35,8 @@ async def get_boxscore(game_id: int):
     
     home_team = mock_data.get_team_by_id(game["home_team_id"])
     away_team = mock_data.get_team_by_id(game["away_team_id"])
+    home_team_stats = mock_data.get_team_stats_for_game(game_id, game["home_team_id"])
+    away_team_stats = mock_data.get_team_stats_for_game(game_id, game["away_team_id"])
     all_stats = mock_data.get_game_stats(game_id)
     
     # Separate home and away player stats
@@ -56,6 +58,8 @@ async def get_boxscore(game_id: int):
         "game": game,
         "home_team": home_team,
         "away_team": away_team,
+        "home_team_stats": home_team_stats,
+        "away_team_stats": away_team_stats,
         "home_players_stats": home_players_stats,
         "away_players_stats": away_players_stats
     }
