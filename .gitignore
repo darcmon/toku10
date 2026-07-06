@@ -29,6 +29,9 @@ backend/.env
 backend/*.db
 backend/*.sqlite
 
+# Claude Code (machine-local settings; launch.json is shared)
+.claude/settings.local.json
+
 # General
 .DS_Store
 *.local
