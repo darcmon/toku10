@@ -1,1 +1,66 @@
 @import 'tailwindcss';
+
+/*
+ * Notches design tokens — "hybrid" direction (see DESIGN.md).
+ * Light editorial stat surfaces + dark broadcast "arena" islands for era content.
+ */
+/* static: rarity utilities are composed dynamically from API data
+   (e.g. bg-legendary-900), so tokens must ship even when unreferenced */
+@theme static {
+  /* Type. Mono renders every numeral in both zones; display caps are dark-zone only. */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: 'Barlow Condensed', ui-sans-serif, sans-serif;
+
+  /* Light zone (stat room) */
+  --color-paper: #ffffff;
+  --color-paper-dim: #f7f7f5;
+  --color-ink: #1a1a1a;
+  --color-ink-dim: #5f5e5a;
+  --color-ink-faint: #98968f;
+  --color-hairline: #e4e2dc;
+
+  /* Dark zone (arena) — era/community surfaces */
+  --color-arena-950: #0c0d12; /* panel bg */
+  --color-arena-900: #10141a; /* neutral card bg */
+  --color-arena-700: #1b1d26; /* hairline on dark */
+  --color-arena-600: #2e3442; /* dashed slot border */
+  --color-arena-500: #3a4152;
+  --color-arena-400: #565b6b; /* faint text */
+  --color-arena-300: #8b90a0; /* muted text */
+  --color-arena-200: #9ba3b5; /* secondary text */
+  --color-arena-50: #f5f6fa;  /* primary text */
+
+  /* Rarity ramps. Dark-zone chips use 900 bg / 600 border / 300 text;
+     light-zone pills use 100 bg / 800 text. */
+  --color-legendary-950: #14111f; /* card bg */
+  --color-legendary-900: #1e1836;
+  --color-legendary-800: #241d42;
+  --color-legendary-600: #4b3f8f;
+  --color-legendary-500: #6d5ef0; /* card frame */
+  --color-legendary-400: #8b7bff;
+  --color-legendary-300: #a99bff;
+
+  --color-epic-900: #2b150d;
+  --color-epic-600: #8f3a1b;
+  --color-epic-300: #ff9c74;
+  --color-epic-100: #faece7;
+  --color-epic-800: #712b13;
+
+  --color-rare-900: #0f2a22;
+  --color-rare-600: #1e5b45;
+  --color-rare-300: #3ddba0;
+  --color-rare-100: #e1f5ee;
+  --color-rare-800: #085041;
+
+  --color-common-900: #1e222c;
+  --color-common-600: #323847;
+  --color-common-300: #9ba3b5;
+  --color-common-100: #f1efe8;
+  --color-common-800: #444441;
+
+  /* Actions and accents */
+  --color-gold-400: #f5b72f;  /* primary action in the arena */
+  --color-gold-950: #171204;  /* text on gold */
+  --color-accent-400: #7f77dd; /* light-zone data accent (comparison bars) */
+}
